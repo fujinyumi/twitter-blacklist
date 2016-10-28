@@ -1,0 +1,31 @@
+{
+    "manifest_version": 2,
+    "name": "Twitter Blacklist",
+    "version": 0.0.0.1,
+
+    "default_locale": "en",
+    "description": "A Chrome extension designed to make it easy to blacklist and filter content you don't want on your timeline",
+    "icons": {
+	"16": "img/icon16.png",
+	"32": "img/icon32.png",
+	"48": "img/icon48.png",
+	"64": "img/icon64.png",
+	"128": "img/icon128.png" },
+
+    "browser_action": {
+	"default_icon": "img/icon16.png",
+	"default_title": "Twitter Blacklist",
+	"default_popup": "src/popup.html"
+    },
+
+    "author": "Miranda Ku",
+    "background": {
+	"scripts": []
+    },
+
+    "content_scripts": [ {
+	"matches": [ "http://www.twitter.com/*", "https://www.twitter.com/*" ],
+	"js": [ "src/insert.js" ],
+	"run_at": "document_start"
+    } ]
+}
