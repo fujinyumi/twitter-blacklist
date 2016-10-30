@@ -1,0 +1,133 @@
+<!doctype html>
+<!-- popup when extension button is clicked - HTML wrapper -->
+
+<html>
+  <head>
+    <title>Twitter Blacklist Menu</title>
+    <style>
+      html, body {
+		font-family: Helvetica;
+		font-size: 100%
+		color:#5b5b5b;
+		background-color:#F5F8FA;
+		width:500px;
+      }
+
+      h1 {
+		display: block;
+		font-family: Helvetica;
+		font-size: 12px;
+		font-style: normal;
+		font-variant: normal;
+		font-weight: 500;
+		color:#5b5b5b;
+      }
+
+      div {
+		color:#5b5b5b;
+      }
+
+      #mainbody,#title {
+		width:100%;
+		background:#fff;
+		display:block;
+		border-radius: 5px;
+		border: 1px solid #D0D3D5;
+		text-align: center;
+      }
+	  
+	  #title img {
+		margin-top:5px;
+	  }
+	  
+	  #bar {
+		float:left;
+		width:100%;
+	  }
+	  
+	#bar > input[type=text]{
+		font-family: Helvetica;
+		background:#fff;
+		border-radius:3px;
+		border: 1px solid #D0D3D5;
+		margin-top:5px;
+		margin-bottom:5px;
+		padding:7px;
+		width:76%;
+	}
+	
+	#bar > input[type=button] {
+		font-family: Helvetica;
+		float:right;
+		width:20%;
+		background:#55ACED;
+		padding:7px;
+		border-radius:3px;
+		border:none;
+		text-decoration:none;
+		margin-top:5px;
+		margin-bottom:5px;
+		color:#fff;
+	}
+	
+	#tags {
+		float:left;
+		width:100%;
+		display:block;
+		min-height:400px;
+		padding-top:2px;
+		padding-bottom:2px;
+		font-size:13px;
+		background:#fff;
+		border-radius:3px;
+		border:1px solid #D0D3D5;
+	}
+
+	 #tags > span{
+		display:block;
+		float:left;
+		color:#fff;
+		background:#55ACED;
+		border-radius:3px;
+		padding:4px;
+		margin:4px;
+	}
+	
+	#close {
+		color:#fff;
+		font-size:10px;
+		margin-left:5px;
+		padding:2px;
+		float:right;
+	}
+	
+	#wrapper {
+		color:#5b5b5b;
+		font-size:10px;
+	}
+	
+	#clearall {
+		float:right;
+		margin-top:5px;
+		margin-bottom:5px;
+	}
+    </style>
+	<script src="../jquery/jquery-3.1.1.min.js"></script>
+	<script src="popup.js"></script>
+  </head>
+  <body>
+    <div id="title">
+      <img style="vertical-align:bottom;" src="../img/icon32.png">
+      <h1>Twitter Blacklist</h1>
+    </div>
+	<div id="bar">
+		<input type="text" value="" placeholder="Enter a word to blacklist" id="enterBar" />
+		<input type="button" value="Add" />
+	</div><br>
+	<div id="tags">
+	</div>
+	<div id="wrapper">
+	<p><div id="clearall">x Clear</div></p>
+	</div>
+  </body>
+</html>
