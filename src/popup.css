@@ -21,7 +21,7 @@ div {
 }
 
 #mainbody,#title {
-    width:100%;
+    width:482px;
     background:#fff;
     display:block;
     border-radius: 5px;
@@ -35,7 +35,7 @@ div {
 
 #bar {
     float:left;
-    width:100%;
+    width:482px;
 }
 
 #bar > input[type=text]{
@@ -65,7 +65,7 @@ div {
 
 #tags {
     float:left;
-    width:100%;
+    width:482px;
     display:block;
     min-height:400px;
     padding-top:2px;
@@ -100,7 +100,7 @@ div {
 }
 
 #clearall {
-    float:right;
+	width:482px;
     margin-top:5px;
     margin-bottom:5px;
 }
