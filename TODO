@@ -1,0 +1,14 @@
+######
+#TODO#
+######
+
+CHROME EXT POPUP
+================
+Basic preliminary UI developed.
+     * On UI-end, adjust clear-all message formatting.
+	 * UI may change; current UI is a basic outline to make testing easier
+	 
+On the backend side:
+	* More options to be added in defaults
+	* Potentially moving things around as development furthers 
+	*** Most of the remaining back end coding is still in progress ***
