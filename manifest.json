@@ -1,7 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Twitter Blacklist",
-    "version": 0.0.0.1,
+    "version": "0.0.0.1",
 
     "default_locale": "en",
     "description": "A Chrome extension designed to make it easy to blacklist and filter content you don't want on your timeline",
