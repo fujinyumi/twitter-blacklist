@@ -24,7 +24,7 @@
     },
 
     "content_scripts": [ {
-		"matches": ["<all_urls>"],
+		"matches": ["http://www.twitter.com/*", "https://www.twitter.com/*", "http://twitter.com/*", "https://twitter.com/*"],
 		"js": [ "jquery/jquery-3.1.1.min.js", "src/insert.js" ],
 		"run_at": "document_start"
     } ]
