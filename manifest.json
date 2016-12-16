@@ -20,12 +20,12 @@
 
     "author": "Miranda Ku",
     "background": {
-	"scripts": []
+	"scripts": ["src/background.js"]
     },
 
     "content_scripts": [ {
-	"matches": [ "http://www.twitter.com/*", "https://www.twitter.com/*" ],
-	"js": [ "src/insert.js" ],
-	"run_at": "document_start"
+		"matches": ["<all_urls>"],
+		"js": [ "jquery/jquery-3.1.1.min.js", "src/insert.js" ],
+		"run_at": "document_start"
     } ]
 }
