@@ -4,7 +4,7 @@
     "version": "0.0.0.1",
 
     "default_locale": "en",
-    "description": "A Chrome extension designed to make it easy to blacklist and filter content you don't want on your timeline",
+    "description": "A Chrome extension designed to make it easy to blacklist and filter content you don't want on your timeline.",
     "icons": {
 	"16": "img/icon16.png",
 	"32": "img/icon32.png",
