@@ -13,7 +13,7 @@ Support on other browsers will be considered in the future.
 ## Current Features
 * Enter words to blacklist those tweets
 * You can unhide blacklisted tweets
-* Enter a phrase in the format "from:<username> <word>" in order to block tweets containing a word from a specific user
+* Enter a phrase in the format "from:USERNAME PHRASE" in order to block tweets containing a word from a specific user
 * Please do not redistribute
 
 
