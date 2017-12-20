@@ -26,7 +26,8 @@ div {
     display:block;
     border-radius: 5px;
     border: 1px solid #D0D3D5;
-    text-align: center;
+    vertical-align:top;
+	text-align:center;
 }
 
 #title img {

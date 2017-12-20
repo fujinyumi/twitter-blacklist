@@ -114,41 +114,105 @@ function filterTweets() {
 				user = user.replace(" ", "").toLowerCase();
 			}
 			
+			var mult_words = false;
+			//multiple phrase test
+			var combo_word = word.split('+');
+			if (combo_word.length > 1) mult_words = true;
+			
 			//tweet text in lowercase
 			var lowercase = oldtext.toLowerCase();
 			
 			//no specified user
 			if (user == "") {
-			if (lowercase.indexOf(word) != -1 && tweetDict[this_id] != undefined) {
-					tweet.textContent = toput;
-					tweet.appendChild(view_anyway);
+				
+				//there are multiple words
+				if (mult_words == true) {
 					
-					if (photoflag == true) {
-						var photo_contain = tweet.parentNode.getElementsByClassName("AdaptiveMediaOuterContainer");
-						for (var m = 0; m < photo_contain.length; m++)
-							tweet.parentNode.removeChild(photo_contain[m]);
+					var no_match = false;
+					for (var n = 0; n < combo_word.length; n++) {
+						if(lowercase.indexOf(combo_word[n]) == -1) {
+							no_match = true;
+							break;
+						}
 					}
-					if (quoteflag == true) {
-						var quote_contain = tweet.parentNode.getElementsByClassName("QuoteTweet");
-						for (var m = 0; m < quote_contain.length; m++)
-							tweet.parentNode.removeChild(quote_contain[m]);
+					if (no_match == false && tweetDict[this_id] != undefined) {
+						tweet.textContent = toput;
+						tweet.appendChild(view_anyway);
+						
+						if (photoflag == true) {
+							var photo_contain = tweet.parentNode.getElementsByClassName("AdaptiveMediaOuterContainer");
+							for (var m = 0; m < photo_contain.length; m++)
+								tweet.parentNode.removeChild(photo_contain[m]);
+						}
+						if (quoteflag == true) {
+							var quote_contain = tweet.parentNode.getElementsByClassName("QuoteTweet");
+							for (var m = 0; m < quote_contain.length; m++)
+								tweet.parentNode.removeChild(quote_contain[m]);
+						}
+					}
+				}
+			
+				//there aren't multiple words
+				else {
+					if (lowercase.indexOf(word) != -1 && tweetDict[this_id] != undefined) {
+						tweet.textContent = toput;
+						tweet.appendChild(view_anyway);
+					
+						if (photoflag == true) {
+							var photo_contain = tweet.parentNode.getElementsByClassName("AdaptiveMediaOuterContainer");
+							for (var m = 0; m < photo_contain.length; m++)
+								tweet.parentNode.removeChild(photo_contain[m]);
+						}
+						if (quoteflag == true) {
+							var quote_contain = tweet.parentNode.getElementsByClassName("QuoteTweet");
+							for (var m = 0; m < quote_contain.length; m++)
+								tweet.parentNode.removeChild(quote_contain[m]);
+						}
 					}
 				}
 			}
 			else {
-				if (user == this_user && lowercase.indexOf(word) != -1 && tweetDict[this_id] != undefined) {
-					tweet.textContent = toput;
-					tweet.appendChild(view_anyway);
+				//there are multiple words
+				if (user == this_user && mult_words == true) {
 					
-					if (photoflag == true) {
-						var photo_contain = tweet.parentNode.getElementsByClassName("AdaptiveMediaOuterContainer");
-						for (var m = 0; m < photo_contain.length; m++)
-							tweet.parentNode.removeChild(photo_contain[m]);
+					var no_match = false;
+					for (var n = 0; n < combo_word.length; n++) {
+						if(lowercase.indexOf(combo_word[n]) == -1) {
+							no_match = true;
+							break;
+						}
 					}
-					if (quoteflag == true) {
-						var quote_contain = tweet.parentNode.getElementsByClassName("QuoteTweet");
-						for (var m = 0; m < quote_contain.length; m++)
-							tweet.parentNode.removeChild(quote_contain[m]);
+					if (no_match == false && tweetDict[this_id] != undefined) {
+						tweet.textContent = toput;
+						tweet.appendChild(view_anyway);
+						
+						if (photoflag == true) {
+							var photo_contain = tweet.parentNode.getElementsByClassName("AdaptiveMediaOuterContainer");
+							for (var m = 0; m < photo_contain.length; m++)
+								tweet.parentNode.removeChild(photo_contain[m]);
+						}
+						if (quoteflag == true) {
+							var quote_contain = tweet.parentNode.getElementsByClassName("QuoteTweet");
+							for (var m = 0; m < quote_contain.length; m++)
+								tweet.parentNode.removeChild(quote_contain[m]);
+						}
+					}
+				}
+				else {
+					if (user == this_user && lowercase.indexOf(word) != -1 && tweetDict[this_id] != undefined) {
+						tweet.textContent = toput;
+						tweet.appendChild(view_anyway);
+						
+						if (photoflag == true) {
+							var photo_contain = tweet.parentNode.getElementsByClassName("AdaptiveMediaOuterContainer");
+							for (var m = 0; m < photo_contain.length; m++)
+								tweet.parentNode.removeChild(photo_contain[m]);
+						}
+						if (quoteflag == true) {
+							var quote_contain = tweet.parentNode.getElementsByClassName("QuoteTweet");
+							for (var m = 0; m < quote_contain.length; m++)
+								tweet.parentNode.removeChild(quote_contain[m]);
+						}
 					}
 				}
 			}
